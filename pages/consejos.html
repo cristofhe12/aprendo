@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../styles/consejos.css">
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Paytone+One">
+    <title>Aprendo-Consejos</title>
+</head>
+<body class="bg-color">
+    <script type="module">
+        import { existSessionOpen} from "../js/authorize.js";
+        import { redirectToRegister } from "../js/routes.js";
+        if(!existSessionOpen()){
+            redirectToRegister();
+        }
+    </script>
+ 
+    <div class="container">
+
+        <div class="container-encabezado">
+            <div class="container-img">
+                <img id="reloj" src="../public/img/reloj.png">
+            </div>
+            <h1 class="titulo">Instrucciones</h1>
+        </div>
+
+        <div class="container-parrafo">
+            <p>
+                A continuación tendrás que resolver <span style="font-weight:bold">15</span> operaciones 
+                matemáticas según la categoría que escogiste. 
+                Y por lo que vemos deseas pulir tus habilidades
+                en la categoría <span id="spanSuma" style="font-weight:bold"></span>. ¡Seguro que será para tí 
+                pan comido!
+            </p>
+            <p>
+                Ten en cuenta que por cada ejercicio habrá un 
+                tiempo límite. Si este termina y aun no has 
+                respondido, entonces pasarás automáticamente 
+                al siguiente ejercicio y no sumaras puntos. 
+                ¡Así que ponte las pilas y responde antes 
+                que el tiempo termine!
+
+            </p>
+            <p>
+                Al finalizar todos los ejercicio te mostraremos 
+                los resultados.
+            </p>
+        </div>
+
+        <div class="form-control">
+            <button id="btnComenzar">Comenzar</button>
+        </div>
+
+    </div>
+    <script src="../js/consejos.js" type="module"></script>
+</body>
+</html>

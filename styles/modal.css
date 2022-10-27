@@ -1,0 +1,74 @@
+
+/*Diseño para el modal*/
+.container-modal{
+    display: none;
+    background-color: rgba(0, 0, 0, 0.767);
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    z-index: 2;
+}
+
+.modal {
+    background-color: white;
+    position:fixed;
+    top: 20%;
+    width: 50%;
+    left: 25%;
+    right: 25%;
+    text-align: center;
+    box-shadow: 2px 2px 5px rgb(0, 0, 0), -2px -2px 5px rgb(0, 0, 0);
+}
+
+#iconAlert{
+    height: 80px;
+}
+
+.modal-title{
+    margin-top: 5px;
+    padding: 0 5px;
+    font-family: Comfortaa;
+    font-size: 1.5em;
+    /* letter-spacing: 2px; */
+    color: rgb(99 99 99)
+}
+
+.btn-aceptar, .btn-rechazar {
+    width: 150px;
+    height: 50px;
+    color: white;
+    font-size: 1.2em;
+}
+
+.btn-aceptar{
+    background-color: rgb(64 81 225);
+    margin: 0 10px 20px 10px;
+}
+
+.btn-rechazar{
+    background-color: rgb(219, 85, 51);
+    margin: 0 10px 20px 10px;
+}
+
+
+.btn-aceptar:hover{
+    box-shadow: 5px 5px 5px rgb(130, 135, 180);
+}
+
+.btn-rechazar:hover{
+    box-shadow: -5px 5px 5px rgb(130, 135, 180);
+}
+
+
+/*Desde aqui se maneja los tamaños de la pantalla*/
+
+/*Media queries para el modal*/
+@media screen and (max-width: 600px){
+    .modal {
+        width: auto;
+        left: 5%;
+        right: 5%;
+    }
+}

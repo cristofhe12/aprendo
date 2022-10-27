@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Paytone+One|Comfortaa">
+    <link rel="stylesheet" type="text/css" href="../styles/informe.css">
+    <link rel="stylesheet" type="text/css" href="../styles/modal_resultados.css">
+    <title>Aprendo-Informe</title>
+</head>
+<body class="bg-color">
+
+    <script type="module">
+        import { existSessionOpen, existCategoria, existResultados, informeIsValid, destroyResultados } from "../js/authorize.js";
+        import { redirectToRegister, redirectToCategories } from "../js/routes.js";
+        if(!existSessionOpen()){
+            redirectToRegister();
+        }
+
+        if(!existCategoria() || !existResultados()){
+            redirectToCategories();
+        }
+
+        if(!informeIsValid()){
+            destroyResultados();
+            redirectToCategories();
+        }
+    </script>
+
+    <div class="container">
+        <div class="container-title">
+            <img class="estrella" id="star-left" src="../public/img/estrella.png">
+            <h1 id="title" class="title"></h1>
+            <img class="estrella" id="star-right" src="../public/img/estrella.png">
+        </div>
+
+        <div class="container-parrafo">
+            <p id="mensajeResultado"></p>
+        </div>
+
+        <div class="container-card">
+            <img id="img-avatar" src="">
+            <img id="img-rostro" src="">
+            <div class="card">
+                <div>
+                    <span id="user"></span>
+                </div>
+                <div>
+                    <span>Aciertos: </span><span id="aciertos">10</span>
+                </div>
+                <div>
+                    <span>Errores: </span><span id="errores">0</span>
+                </div>
+                <div>
+                    <span>Nota: </span><span id="nota"></span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="form-control">
+            <button id="btnVolverJugar">Volver a jugar</button>
+            <button id="btnIrCategorias">Ir a categorías</button>
+            <button id="btnVerResultados">Ver resultados</button>
+        </div>
+    </div>
+
+    <div id="modalResultados" class="container-modal">
+        <div class="modal">
+            <div class="modal-header">
+                <h1 class="modal-title">Comprueba tus respuestas</h1>
+            </div>
+            <div id="modal-body" class="modal-body">
+            </div>
+            <button id="btnCerrarModal" class="btn-aceptar">Cerrar</button>  
+        </div>    
+        
+    </div>
+
+    <audio id="audioInforme" src=""></audio>
+  
+    <script src="../js/informe.js" type="module"></script>
+</body>
+</html>

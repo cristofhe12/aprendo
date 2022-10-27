@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../styles/categories.css">
+    <link rel="stylesheet" type="text/css" href="../styles/modal.css">
+
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Paytone+One|Comfortaa">
+    <title>Aprendo-Categorias</title>
+</head>
+<body class="bg-color">
+
+    <script type="module">
+       import { existSessionOpen } from "../js/authorize.js";
+       import { redirectToRegister } from "../js/routes.js";
+        if(!existSessionOpen()){
+            redirectToRegister();
+        }
+    </script>
+
+    <div class="container">
+        <div class="container-titulo">
+            <h1 class="titulo">Escoge una categoría</h1>
+        </div>
+        <div class="container-img">
+            <div class="img-flecha"> 
+                <img id="flecha" src="../public/img/flecha.png">
+            </div>
+            <div class="img-papa">
+                <img id="papa" src="../public/img/papa.png">
+            </div>
+            <div class="img-amarillo">
+                <img id="amarillo" src="../public/img/amarillo.png">
+            </div>
+        </div>
+        <div class="container-categorias">
+            <div class="card">
+                <span class="card-number">01</span>
+                <span id="btnSumas" class="card-title" >SUMAS</span>
+            </div>
+            <div class="card">
+                <span class="card-number" >02</span>
+                <span id="btnRestas" class="card-title" >RESTAS</span>
+            </div>
+            <div class="card">
+                <span class="card-number" >03</span>
+                <span id="btnDivision" class="card-title" >DIVISIÓN</span>
+            </div>
+            <div class="card">
+                <span class="card-number" >04</span>
+                <span id="btnMultiplicacion" class="card-title" >MULTIPLICACIÓN</span>
+            </div>
+            <div class="card">
+                <span class="card-number" >05</span>
+                <span id="btnTodo" class="card-title" >PUEDO CON TODO!</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="form-control">
+        <div class="form-button">
+            <button id="btnCerrar" class="btn-volver">Cerrar juego</button>
+        </div>
+    </div>
+
+    <div id="modalCategories" class="container-modal">
+        <div class="modal">
+            <div class="modal-header">
+                <img id="iconAlert" src="../public/icon/alert.png">
+            </div>
+            <div class="modal-body">
+                <h3 class="modal-title">¿Seguro que deseas abandonar el juego?</h3>
+                <button id="btnAceptar" class="btn-aceptar">Si</button>
+                <button id="btnRechazar" class="btn-rechazar">No</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/categories.js" type="module"></script>
+</body>
+</html>

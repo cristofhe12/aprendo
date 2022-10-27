@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../styles/operaciones.css">
+    <link rel="stylesheet" type="text/css" href="../styles/modal.css">
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Paytone+One|Comfortaa">
+    <title>Aprendo-Operaciones</title>
+</head>
+<body class="bg-color">
+    <script type="module">
+        import { existSessionOpen, existCategoria } from "../js/authorize.js";
+        import { redirectToRegister, redirectToCategories } from "../js/routes.js";
+        if(!existSessionOpen()){
+            redirectToRegister();
+        }else{
+            const res = existCategoria();
+            if(!res){redirectToCategories()}
+        }
+    </script>
+
+    <div class="container">
+
+        <div class="container-tiempo">
+            <button id="btnSalir" class="btn-salir">Salir</button>
+            <h2 class="tiempo">Tiempo restante</h2>
+            <span id="timerMinute" class="timer">0</span><span id="separator" class="timer">:</span><span id="timerSecond" class="timer">00</span>
+        </div>
+
+        <div class="container-img">
+            <div class="img-morado">
+                <img id="morado" src="../public/img/morado.png">
+            </div>
+            <div class="img-base">
+                <img id="base" src="../public/img/base.png">
+            </div>
+        </div>
+
+        <div class="container-operacion">
+          <div class="operacion-arriba">
+            <span id="numArriba"></span><span id="signoOperacion">+</span>
+          </div>
+          <div class="operacion-abajo">
+            <span id="numAbajo"></span><span>=</span>
+          </div>
+          <div class="operacion-resultado">
+            <hr class="hr-line">
+            <input id="txtResultado" type="number">
+          </div>
+        </div>
+
+        <div class="form-control">
+            <div class="form-button">
+                <button id="btnEnviar" class="btn-enviar">ENVIAR RESPUESTA!</button>
+            </div>
+            <div class="ejercicios-restantes">
+                <span id="opFinalizadas"></span> de <span id="opTotales"></span> ejercicios
+            </div>
+        </div>
+    </div>
+
+
+    <div id="modalOperaciones" class="container-modal">
+        <div class="modal">
+            <div class="modal-header">
+                <img id="iconAlert" src="../public/icon/alert.png">
+            </div>
+            <div class="modal-body">
+                <h3 class="modal-title">
+                    Si sales del juego en este momento perderás TODO tu progreso. 
+                    ¿Seguro que deseas salir?
+                </h3>
+                <button id="btnAceptar" class="btn-aceptar">Si</button>
+                <button id="btnRechazar" class="btn-rechazar">No</button>
+            </div>
+        </div>
+    </div>
+
+    <audio src="../public/audio/song.mp3" autoplay="autoplay" loop="loop"></audio>
+
+    <script src="../js/operaciones.js" type="module"></script>
+</body>
+</html>

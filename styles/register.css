@@ -1,0 +1,182 @@
+*{
+    box-sizing: border-box;
+}
+.bg-gray{
+    background-color: rgb(247 247 249);
+}
+
+.titulo{
+    font-family: "Paytone One";
+    font-size: 3.7em;
+    text-align: center;
+    letter-spacing: 4px;
+}
+
+.form-control {
+    text-align: center;
+    margin: 50px 0 0 0;
+
+}
+
+.lb-nombre {
+    font-family: arial;
+    font-size: 2.1em;
+    margin-right: 10px;
+}
+
+.lb-genero {
+    font-family: arial;
+    font-size: 2.1em;
+}
+
+/*radio button*/
+input[type="radio"]{
+    display: none;
+}
+
+.lbl-chico {
+    margin-right: 100px;
+}
+.lbl-chico, .lbl-chica {
+    color:black;
+    padding: 7px 50px 7px 15px;
+    display: inline-block;
+    position: relative;
+    font-size: 1.5em;
+    font-family:'Arial Narrow Bold', sans-serif;
+    border-radius: 3px;
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+}
+
+.lbl-chico:hover, .lbl-chica:hover{
+    background-color: rgb(0,116,218,0.2);
+}
+
+.lbl-chico:after, .lbl-chica:after{
+    content: "";
+    width: 34px;
+    height: 34px;
+    display: inline-block;
+    background-color: none;
+    border: 3px solid rgb(73 79 86);
+    /*border-radius: 50%;*/
+    position: absolute;
+    right: 0px;
+    top: 0px;
+
+}
+
+input[type="radio"]:checked + label{
+    padding: 7px 15px;
+    background-color: rgb(64 81 225);
+    border-radius: 2px;
+    color: white;
+}
+
+input[type="radio"]:checked + label:after{
+    display: none;
+}
+/*radio button*/
+
+.txt-nombre {
+    border: solid rgb(73 79 86) 3px;
+    width: 400px;
+    height: 40px;
+    font-size: 2.1em;
+    padding-left: 10px;
+    padding-right: 10px;
+    color: rgb(64 81 225);
+}
+
+
+
+.img-container {
+    text-align: center;
+}
+
+img{
+    height: 120px;
+    margin:20px 30px 0 30px;
+}
+
+.form-button {
+    margin-top: 20px;
+    text-align: center;
+}
+
+button {
+    width: 150px;
+    height: 50px;
+    color: white;
+    font-size: 1.2em;
+}
+
+.btn-iniciar, .btn-aceptar{
+    background-color: rgb(64 81 225);
+}
+
+.btn-volver{
+    background-color: rgb(219, 85, 51);
+}
+
+.btn-volver,.btn-iniciar {
+    margin: 15px;
+}
+
+.btn-volver:hover{
+    box-shadow: -5px 5px 5px rgb(130, 135, 180);
+}
+.btn-iniciar:hover, .btn-aceptar:hover{
+    box-shadow: 5px 5px 5px rgb(130, 135, 180);
+}
+
+/*Desde aqui se maneja los tamaños de la pantalla*/
+
+/*Para pantallas menores a 450px*/
+@media screen and (max-width:450px){
+    .titulo{
+        width: 100%;
+        font-size: 2.5em;
+        letter-spacing: 3px;
+    }
+
+    .form-control {
+        margin: 0 0 60px 0;    
+    }
+
+       
+    .lb-nombre {
+        display: block;
+        font-family: arial;
+        font-size: 1.5em;
+        margin-right: 0;
+    }
+
+    .txt-nombre {
+        display: block;
+        width: 100%;
+        font-size: 1.5em;
+        text-align: center;
+    }
+
+    .lb-genero {
+        font-family: arial;
+        font-size: 1.5em;
+    }
+
+    img{
+        height: 80px;
+        margin:0 20px;
+    }
+
+    .lbl-chico, .lbl-chica {
+        font-size: 1.3em;
+        margin: 0 10px;
+    }
+
+    button {
+        width: 100px;
+    }
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../styles/register.css">
+    <link rel="stylesheet" type="text/css" href="../styles/modal.css">
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Paytone+One|Comfortaa">
+    <title>Aprendo-Registrarse</title>
+</head>
+<body class="bg-gray">
+    <script type="module">
+        import { existSessionOpen } from "../js/authorize.js";
+        import { redirectToCategories } from "../js/routes.js";
+        if(existSessionOpen()){
+        redirectToCategories();
+        }
+     </script>
+
+    <h1 class="titulo">Dinos quien eres</h1>
+    
+    <div class="form-control">
+        <label for="txtNombre" class="lb-nombre">Nombre</label>
+        <input id="txtNombre" class="txt-nombre" type="text">
+    </div>
+
+    <div class="form-control">
+        <label class="lb-genero">Escoge tu género:</label>
+        <div class="img-container">
+            <img src="../public/img/chico.png">
+            <img src="../public/img/chica.png">
+        </div>
+
+        <input type="radio" id="rbChico" name="rb-genero" class="rb-chico">
+        <label class="lbl-chico" for="rbChico">Niño</label>
+        
+        <input type="radio" id="rbChica" name="rb-genero" class="rb-chica">
+        <label class="lbl-chica" for="rbChica">Niña</label>
+    </div>
+    
+    <div class="from-control">
+        <div class="form-button">
+            <button id="btnVolver" class="btn-volver">Volver</button>
+            <button id="btnIniciar" class="btn-iniciar">Iniciar</button>
+        </div>
+    </div>
+    
+    <div id="modalRegister" class="container-modal">
+        <div class="modal">
+            <div class="modal-header">
+                <img id="iconAlert" src="../public/icon/alert.png">
+            </div>
+            <div class="modal-body">
+                <h3 class="modal-title">Por favor, completa la información solicitada</h3>
+                <button id="btnAceptar" class="btn-aceptar">Aceptar</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/register.js" type="module"></script>
+</body>
+</html>

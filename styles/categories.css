@@ -1,0 +1,307 @@
+*{
+    box-sizing: border-box;
+}
+
+.bg-color {
+    background-color: rgb(64 81 225);
+}
+
+.container{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.container-titulo{
+    width: 100%;
+    text-align: center;
+}
+
+.titulo {
+    margin-top: 10px;
+    color: white;
+    font-family: "Paytone One";
+    font-size: 4.3em;
+    letter-spacing: 4px;
+}
+
+.container-img{
+    width: 45%;
+    position: relative;
+    height: 90vh;
+}
+
+.container-categorias{
+    width: 55%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: space-between;
+
+}
+
+#flecha{
+    height: 270px;
+}
+
+#papa{
+    height: 450PX;
+}
+
+#amarillo{
+height: 250px;
+}
+
+.img-flecha{
+    position: absolute;
+    right: 11%;
+}
+
+.img-papa{
+    position: absolute;
+    right: 40%;
+    top: 100px;
+}
+
+.img-amarillo{
+    position: absolute;
+    right: 10%;
+    top: 300px;
+}
+
+/*Aqui se le da estilos a las card de categorias*/
+.card{
+    background-color: white;
+    width: 45%;
+    height: 28%;
+    border-radius: 20px;
+    position: relative;
+    text-align: center;
+    cursor: pointer;
+}
+
+.card-number{
+    padding: 20px 19px;
+    border-radius: 40px;
+    background-color: rgb(219 221 128);
+    color: rgb(64 81 225);
+    font-size: 1.5em;
+    font-weight: bold;
+    font-family: "Paytone One";
+    letter-spacing: 3px;
+
+}
+
+.card-title{
+    position: absolute;
+    width: 80%;
+    right: 10%;
+    text-align: center;
+    top: 70px;
+    font-size: 1.7em;
+    font-family: sans-serif;
+    color: rgb(90 90 90);
+}
+
+/*Hover en tarjetas*/
+.card:hover{
+    background-color: rgb(235, 235, 235);
+    transition: all 300ms;
+}
+
+/*Boton*/
+.form-control
+{
+    text-align: left;
+}
+
+button {
+    width: 150px;
+    height: 50px;
+    color: white;
+    font-size: 1.2em;
+}
+
+.btn-volver{
+    background-color: rgb(219, 85, 51);
+}
+
+.btn-volver:hover{
+    box-shadow: -5px 5px 5px rgb(130, 135, 180);
+}
+
+/*Desde aqui se maneja los tamaños de la pantalla*/
+/*Para pantallas menores a 600 px*/
+@media screen and (max-width:1200px){
+    .titulo {
+        font-size: 3em;
+        letter-spacing: 4px;
+    }
+    .container-img{
+        width: 45%;
+        height: 60vh;
+    }
+
+    #flecha{
+        height: 150px;
+    }
+    
+    #papa{
+        height: 249PX;
+    }
+    
+    #amarillo{
+    height: 138px;
+    }
+
+    .img-flecha{
+        position: absolute;
+        right: 25%;
+    }
+    
+    .img-papa{
+        position: absolute;
+        right: 45%;
+        top: 100px;
+    }
+    
+    .img-amarillo{
+        position: absolute;
+        right: 15%;
+        top: 211px;
+    }
+
+    .container-categorias{
+        width: 55%;
+        height: 400px;
+        display: flex;
+    }
+
+    .card{
+        width: 45%;
+        height: 110px;
+    }
+    
+    .card-title{
+        top: 55px;
+        font-size: 1em;
+    }
+}
+
+/*Para pantallas menores a 600 px*/
+@media screen and (max-width:600px){
+    .titulo {
+        font-size: 2.7em;
+        letter-spacing: 4px;
+    }
+    .container-img{
+        width: 45%;
+        height: 60vh;
+    }
+
+    #flecha{
+        height: 150px;
+    }
+    
+    #papa{
+        height: 249PX;
+    }
+    
+    #amarillo{
+    height: 138px;
+    }
+
+    .img-flecha{
+        position: absolute;
+        right: 25%;
+    }
+    
+    .img-papa{
+        position: absolute;
+        right: 45%;
+        top: 100px;
+    }
+    
+    .img-amarillo{
+        position: absolute;
+        right: 15%;
+        top: 211px;
+    }
+
+    .container-categorias{
+        width: 55%;
+        height: 700px;
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: column;
+    }
+
+    .card{
+        width: 100%;
+        height: 110px;
+    }
+    
+    .card-title{
+        top: 60px;
+        font-size: 1.3em;
+    }
+}
+
+/*Para pantallas menores a 346 px*/
+@media screen and (max-width:400px){
+    .titulo {
+        margin-top: 0px;
+        font-size: 2.5em;
+        letter-spacing: 3px;
+    }
+    .container-img{
+        width: 100%;
+        height: 60vh;
+    }
+
+    #flecha{
+        height: 150px;
+    }
+    
+    #papa{
+        height: 249PX;
+    }
+    
+    #amarillo{
+    height: 138px;
+    }
+
+    .img-flecha{
+        position: absolute;
+        right: 25%;
+    }
+    
+    .img-papa{
+        position: absolute;
+        right: 45%;
+        top: 100px;
+    }
+    
+    .img-amarillo{
+        position: absolute;
+        right: 15%;
+        top: 211px;
+    }
+
+    .container-categorias{
+        width: 100%;
+        height: 700px;
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: column;
+    }
+
+    .card{
+        width: 100%;
+        height: 110px;
+    }
+    
+    .card-title{
+        top: 60px;
+        font-size: 1.3em;
+    }
+}

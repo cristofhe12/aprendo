@@ -1,0 +1,339 @@
+* {
+    box-sizing: border-box;
+}
+
+/*Fondos de pantalla*/
+.bg-gray{
+    background-color: #f7f7f9;
+}
+
+/*paneles*/
+.container{
+ height: 94vh;
+ display: flex;
+ flex-wrap: wrap;
+ align-items:stretch;
+}
+
+.container-titulo {
+    width: 50%;
+}
+
+.container-img {
+    position: relative;
+    width: 50%;
+}
+
+
+/*Texto titulo pagina*/
+.titulo {
+    font-family: "Paytone One"; 
+    letter-spacing: 2px;
+    line-height: 80px;
+    color: #4051e1;
+    font-size: 5.1em;
+    margin-top: 30%;
+    margin-left: 18%;
+}
+
+
+.btn-empezar{
+    width: 250px;
+    height:70px;
+    border-radius: 60px;
+    color: rgba(39, 38, 38);
+    font-size: 2em;
+    font-family: "Comfortaa";
+    font-weight: bold;
+    margin-left: 36%;
+    background-color: rgb(219 221 128);
+    border: 5px rgb(125, 126, 58);
+    box-shadow: 1px 6px 5px rgb(226, 225, 225);
+}
+
+.btn-empezar:hover{
+    background-color: rgb(227, 230, 64);
+    color: rgb(41, 41, 41);
+    box-shadow: 1px 6px 5px rgb(180, 179, 179);
+}
+
+.img-avion{
+    position: absolute;
+    top: 260px;
+    right: 60%;
+    transform: rotate(24deg);
+    z-index: 2;
+}
+
+.img-azul{
+    height: 120px;
+    position: absolute;
+    top: 55px;
+    right:47%;
+    z-index:1;
+}
+
+.img-libros{
+    height: 160px;
+    position: absolute;
+    top: 405px;
+    right: 36%;
+}
+
+.img-amarillo {
+    height: 300px;
+    position: absolute;
+    top: 260px;
+    right: 10%;
+}
+
+#avion {
+    height: 120px;;
+}
+
+#azul {
+    height: 370px;
+}
+
+#amarillo {
+    height: 300px;
+}
+
+#libros {
+    height: 160px;
+}
+
+/*Desde aqui se maneja los tamaños de la pantalla*/
+/*Para pantallas menores a 600 px*/
+@media screen and (max-width:1200px){
+    .container {
+        height: 100vh;
+    }
+    .container-titulo {
+        text-align: center;
+        width: 100%;
+        height: 40%;
+    }
+    
+    .container-img {
+        width: 100%;
+        height: 60%;
+    }
+
+    .titulo {
+        letter-spacing: 2px;
+        line-height: 50px;
+        color: #4051e1;
+        font-size: 5em;
+        margin-top: 7%;
+        margin-left: 0%;
+    }
+
+    .btn-empezar{
+        width: 190px;
+        height:70px;
+        font-size: 2em;
+        font-weight: bold;
+        margin-left: 0%;
+    }
+    
+    .img-avion{
+        position: absolute;
+        top: 160px;
+        right: 48%;
+        transform: rotate(24deg);
+        z-index: 2;
+    }
+
+    .img-azul{
+        position: absolute;
+        top: 25px;
+        right:39%;
+        z-index:1;
+    }
+
+    .img-libros{
+        position: absolute;
+        top: 260px;
+        right: 33%;
+    }
+
+    .img-amarillo {
+        position: absolute;
+        top: 166px;
+        right: 19%;
+        z-index: 3;
+    }
+    
+    #avion {
+        height: 90px;;
+    }
+
+    #azul {
+        height: 250px;
+    }
+
+    #amarillo {
+        height: 200px;
+    }
+
+    #libros {
+        height: 110px;
+    }
+}
+
+/*Para pantallas menores a 600 px*/
+@media screen and (max-width:600px){
+    .container {
+        height: 100vh;
+    }
+    .container-titulo {
+        text-align: center;
+        width: 100%;
+        height: 40%;
+    }
+    
+    .container-img {
+        width: 100%;
+        height: 60%;
+    }
+
+    .titulo {
+        letter-spacing: 2px;
+        line-height: 35px;
+        color: #4051e1;
+        font-size: 3em;
+        margin-top: 7%;
+        margin-left: 0%;
+    }
+
+    .btn-empezar{
+        width: 150px;
+        height:70px;
+        font-size: 1.2em;
+        font-weight: bold;
+        margin-left: 0%;
+    }
+    
+    .img-avion{
+        position: absolute;
+        top: 140px;
+        right: 59%;
+        transform: rotate(24deg);
+        z-index: 2;
+    }
+
+    .img-azul{
+        position: absolute;
+        top: 20px;
+        right:39%;
+        z-index:1;
+    }
+
+    .img-libros{
+        position: absolute;
+        top: 240px;
+        right: 33%;
+    }
+
+    .img-amarillo {
+        position: absolute;
+        top: 146px;
+        right: 12%;
+        z-index: 3;
+    }
+    
+    #avion {
+        height: 70px;;
+    }
+
+    #azul {
+        height: 230px;
+    }
+
+    #amarillo {
+        height: 190px;
+    }
+
+    #libros {
+        height: 100px;
+    }
+}
+
+/*Para pantallas menores a 346 px*/
+@media screen and (max-width:400px){
+    .container {
+        height: 100vh;
+    }
+    .container-titulo {
+        text-align: center;
+        width: 100%;
+        height: 40%;
+    }
+    
+    .container-img {
+        width: 100%;
+        height: 60%;
+    }
+
+    .titulo {
+        letter-spacing: 2px;
+        line-height: 30px;
+        color: #4051e1;
+        font-size: 2em;
+        margin-top: 7%;
+        margin-left: 0%;
+    }
+
+    .btn-empezar{
+        width: 150px;
+        height:70px;
+        font-size: 1.2em;
+        font-weight: bold;
+        margin-left: 0%;
+    }
+    
+    .img-avion{
+        position: absolute;
+        top: 140px;
+        right: 56%;
+        transform: rotate(24deg);
+        z-index: 2;
+    }
+
+    .img-azul{
+        position: absolute;
+        top: 20px;
+        right:37%;
+        z-index:1;
+    }
+
+    .img-libros{
+        position: absolute;
+        top: 210px;
+        right: 29%;
+    }
+
+    .img-amarillo {
+        position: absolute;
+        top: 116px;
+        right: 1%;
+        z-index: 3;
+    }
+    
+    #avion {
+        height: 60px;;
+    }
+
+    #azul {
+        height: 200px;
+    }
+
+    #amarillo {
+        height: 160px;
+    }
+
+    #libros {
+        height: 70px;
+    }
+}

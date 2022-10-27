@@ -1,0 +1,153 @@
+*{
+    box-sizing: border-box;
+}
+
+.bg-color{
+    background-color: rgb(124 139 191);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+.container-encabezado{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.container-img{
+    padding-top: 10px;
+    text-align: right;
+    width: 18%;
+}
+
+.container-parrafo{
+ margin: 0 3%;
+}
+
+.form-control{
+    text-align: right;
+    padding-right: 2%;
+
+}
+
+#reloj{
+    height: 170px;
+}
+
+.titulo{
+    padding-top: 40px;
+    margin: 0px;
+    text-align: center;
+    width: 82%;
+    font-size: 4.5em;
+    color: rgb(246, 246, 248);
+    font-family: "Paytone One";
+    letter-spacing: 6px;
+}
+
+p{
+    color: rgb(246, 246, 248);;
+    font-size: 1.7em;
+    font-family: sans-serif;
+
+}
+
+button{
+    height: 70px;
+    width: 160px;
+    font-size: 1.6em;
+    background-color: rgb(0 74 173);
+    color: white;
+    border: none;
+}
+
+button:hover{
+    background-color: rgb(5, 49, 107);
+}
+
+/*Desde aqui se maneja los tamaños de la pantalla*/
+/*Para pantallas menores a 600 px*/
+@media screen and (max-width:1200px){
+    #reloj{
+        height: 130px;
+        margin-left: 12%;
+    }
+    
+    .titulo{
+        padding-top: 20px;
+        font-size: 3.1em;
+        letter-spacing: 5px;
+    }
+
+    p{
+        font-size: 1.4em;    
+    }
+
+    button{
+        position: fixed;
+        bottom: 10px;
+        right: 10px;
+        height: 50px;
+        width: 120px;
+        font-size: 1.2em;
+    }
+}
+
+/*Para pantallas menores a 600 px*/
+@media screen and (max-width:600px){
+    #reloj{
+        height: 90px;
+    }
+    
+    .titulo{
+        padding-top: 20px;
+        font-size: 2.4em;
+        letter-spacing: 4px;
+    }
+
+    p{
+        font-size: 1.2em;    
+    }
+
+    button{
+        position: fixed;
+        bottom: 10px;
+        right: 10px;
+        height: 50px;
+        width: 120px;
+        font-size: 1.2em;
+    }
+}
+
+/*Para pantallas menores a 346 px*/
+@media screen and (max-width:400px){
+    .container-encabezado{
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    #reloj{
+        height: 70px;
+    }
+    
+    .titulo{
+        padding-top: 20px;
+        font-size: 2em;
+        letter-spacing: 3px;
+    }
+
+    p{
+        font-size: 1em;    
+    }
+
+    button{
+        position: fixed;
+        bottom: 10px;
+        right: 10px;
+        height: 50px;
+        width: 120px;
+        font-size: 1.2em;
+    }
+}

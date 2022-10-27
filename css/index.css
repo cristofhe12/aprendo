@@ -1,0 +1,80 @@
+.bg-gray {
+    background-color: rgb(247 247 249);
+}
+
+.contenedor-left {
+    width: 49%;
+    display: inline;
+    float:left;
+}
+
+.contenedor-rigth{
+    width: 49%;
+    display: inline;
+    float: right;
+
+}
+
+/*Aqui se le da estilo a las imagenes*/
+.img-avion {
+    position: absolute;
+    top:49%;
+    right: 32%;
+    transform: rotate(24deg);
+    z-index: 2;
+}
+
+.img-azul {
+    position: absolute;
+    top:13%;
+    right: 25%;
+    z-index: 1;
+}
+
+.img-libros {
+    position: absolute;
+    top: 69%;
+    right: 18%;
+}
+
+.img-amarillo{
+    position: absolute;
+    top:46%;
+    right: 6%;
+}
+
+/*Aqui se le da estilo al titulo*/
+.contenedor-titulo {
+   
+    position: absolute;
+    top:27%;
+    left: 6%;
+}
+
+.titulo {
+    color: rgb(64 81 225);
+    font-size: 5.1em;
+    width: 55%;
+    font-family: "Paytone One";
+    line-height: 80px;
+    letter-spacing: 5px;
+}
+
+/*Aqui le damos estilo al boton*/
+.btn-empezar {
+    width: 250px;
+    height: 70px;
+    border-radius: 60px;
+    background-color: rgb(219 221 128);
+    font-size: 2em;
+    color: rgb(73 79 86);
+    border: 5px solid rgb(175, 177, 91);
+    margin-left: 110px;
+    font-family: Comfortaa;
+}
+
+.btn-empezar:hover {
+    background-color: rgb(234, 236, 89);
+    color: rgb(43, 44, 46);
+    box-shadow: 5px 5px 5px rgb(121, 119, 119);
+}

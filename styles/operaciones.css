@@ -1,0 +1,487 @@
+*{
+    box-sizing: border-box;
+}
+.bg-color{
+   background-color: rgb(247 247 249);
+}
+
+/*Contenedores*/
+.container{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.container-tiempo{
+    text-align: right;
+    width: 100%;
+}
+
+.container-img{
+    width: 33.33333%;
+    position: relative;
+    height: 60vh;
+}
+
+.container-operacion{
+    width: 33.33333%;
+    text-align: center;
+}
+
+.form-control{
+    width: 33.33333%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-content: flex-end;
+}
+
+/*Medidor de tiempo*/
+.tiempo{
+    color: rgb(73 79 86);
+    font-family: "Paytone One";
+    font-size: 3.5em;
+    letter-spacing: 4px;
+    margin-right: 7%;
+    margin-bottom: 0;
+}
+
+.timer{
+    font-family: "Paytone One";
+    font-size: 3.5em;
+    letter-spacing: 4px;
+    margin-right: 0%;
+}
+
+.timer:nth-child(5){
+    margin-right: 20%;
+}
+
+/*Imagenes*/
+#morado{
+    height: 300px;
+}
+
+#base{
+    height: 280px;
+    transform: rotate(-65deg);
+}
+
+.img-morado{
+    position: absolute;
+    top: -70px;
+    left: 15%;
+    z-index: 1;
+}
+
+.img-base{
+    position: absolute;
+    top: 90px;
+    right: 10%;
+}
+
+/*Operaciones matematicas*/
+.operacion-arriba, .operacion-abajo{
+    height: 90px;
+    font-size: 4.3em;
+    font-family: "Paytone One";
+    color:rgb(73 79 86);
+}
+
+#txtResultado{
+    height: 110px;
+    width: 130px;
+    font-size: 4.3em;
+    font-family: "Paytone One";
+    color:rgb(6, 101, 209);
+    background-color: rgb(219 221 128);
+    text-align: center;
+    border: none;
+}
+
+.hr-line{
+    border-top: solid black 5px;
+    width: 170px;
+}
+
+/*Estilos de los botones y la leyenda*/
+.form-button{
+    margin: 0 30px 40px 0;
+}
+
+.btn-enviar{
+    background-color: rgb(64 81 225);
+    border: 5px solid rgb(48 11 153);
+    color: white;
+    height: 120px;
+    width: 250px;
+    font-size: 1.5em;
+}
+
+.btn-enviar:hover{
+    background-color: rgb(45, 57, 168);
+}
+
+.ejercicios-restantes{
+    font-size: 1.6em;
+    font-weight: bold;
+    text-align: right;
+    padding-right: 20px;
+}
+
+
+.btn-salir{
+    background-color: rgb(247, 25, 25);
+    border: 2px solid rgb(153, 11, 11);
+    color: white;
+    height: 35px;
+    width: 90px;
+    font-size: 1em;
+    position: fixed;
+    top: 10px;
+    left: 10px;
+}
+
+.btn-salir:hover{
+    background-color: rgb(189, 0, 0);
+}
+
+/*Desde aqui se maneja los tamaños de la pantalla*/
+/*Para pantallas menores a 600 px*/
+@media screen and (max-width:1200px){
+    .container{
+        flex-direction: column;
+        height: 98vh;
+    }
+
+    .container-tiempo{
+        text-align: center;
+        width: 40%;
+        height: 30vh;
+    }
+    
+    .container-img{
+        width: 40%;
+        height: 67vh;
+    }
+    
+    .container-operacion{
+        width: 60%;
+        height: 77vh;
+        padding-top: 50px;
+    }
+    
+    .form-control{
+        width: 60%;
+        height: 20vh;
+    }
+
+    .tiempo{
+        margin-top: 0;
+        width: 50%;
+        margin: auto;
+        font-size: 2em;
+        letter-spacing: 1px;
+    }
+
+    .timer{
+        font-size: 2.5em;
+        letter-spacing: 2px;
+        margin: auto;
+    }
+
+    #morado{
+        height: 200px;
+    }
+    
+    #base{
+        height: 186px;
+        transform: rotate(-65deg);
+    }
+
+    .img-morado{
+        top: 0px;
+        left: 30%;
+    }
+    
+    .img-base{
+        top: 120px;
+        left: 31%;
+    }
+
+    .btn-salir{
+        right: 0;
+        left: auto;
+    }
+
+    .form-button{
+        margin: 0 0 0 0;
+        text-align: right;
+    }
+    
+    .btn-enviar{
+        height: 80px;
+        width: 166px;
+        font-size: 1em;
+    }
+    
+    .ejercicios-restantes{
+        font-size: 1.2em;
+        padding-right: 10px;
+        margin-bottom: 10px;
+    }
+}
+
+/*Para pantallas menores a 600 px*/
+@media screen and (max-width:600px){
+    .container{
+        flex-direction: column;
+        height: 98vh;
+    }
+
+    .container-tiempo{
+        text-align: left;
+        width: 40%;
+        height: 30vh;
+    }
+    
+    .container-img{
+        width: 40%;
+        height: 67vh;
+    }
+    
+    .container-operacion{
+        width: 60%;
+        height: 77vh;
+        padding-top: 50px;
+    }
+    
+    .form-control{
+        width: 60%;
+        height: 20vh;
+    }
+
+    .tiempo{
+        margin-top: 0;
+        width: 50%;
+        margin-left: 1%;
+        font-size: 2em;
+        letter-spacing: 1px;
+    }
+
+    .timer{
+        font-size: 2.5em;
+        letter-spacing: 2px;
+        margin-right: 7%;
+    }
+
+    #morado{
+        height: 150px;
+    }
+    
+    #base{
+        height: 139.5px;
+        transform: rotate(-65deg);
+    }
+
+    .img-morado{
+        top: 0px;
+        left: 1%;
+    }
+    
+    .img-base{
+        top: 90px;
+        left: 2%;
+    }
+
+    .btn-salir{
+        right: 0;
+        left: auto;
+    }
+
+    .form-button{
+        margin: 0 0 0 0;
+        text-align: right;
+    }
+    
+    .btn-enviar{
+        height: 80px;
+        width: 166px;
+        font-size: 1em;
+    }
+    
+    .ejercicios-restantes{
+        font-size: 1.2em;
+        padding-right: 10px;
+        margin-bottom: 10px;
+    }
+}
+
+/*Para pantallas menores a 400 px*/
+@media screen and (max-width:400px){
+    .container{
+        flex-direction: column;
+        height: 98vh;
+    }
+
+    .container-tiempo{
+        text-align: left;
+        width: 37%;
+        height: 25vh;
+    }
+    
+    .container-img{
+        width: 37%;
+        height: 72vh;
+    }
+    
+    .container-operacion{
+        width: 63%;
+        height: 67vh;
+        padding-top: 50px;
+    }
+    
+    .form-control{
+        width: 63%;
+        height: 30vh;
+        justify-content: flex-start;
+    }
+
+    .tiempo{
+        margin-top: 0;
+        width: 50%;
+        margin-left: 1%;
+        font-size: 1.2em;
+        letter-spacing: 1px;
+    }
+
+    .timer{
+        font-size: 2.5em;
+        letter-spacing: 1px;
+        margin-right: 7%;
+    }
+
+    #morado{
+        height: 100px;
+    }
+    
+    #base{
+        height: 93px;
+        transform: rotate(-65deg);
+    }
+
+    .img-morado{
+        top: 0px;
+        left: 1%;
+    }
+    
+    .img-base{
+        top: 60px;
+        left: 2%;
+    }
+
+    .btn-salir{
+        right: 10px;
+        left: auto;
+    }
+
+    .form-button{
+        margin: 0 0 0 0;
+        text-align: right;
+    }
+    
+    .btn-enviar{
+        height: 80px;
+        width: 166px;
+        font-size: 1em;
+    }
+    
+    .ejercicios-restantes{
+        font-size: 1.2em;
+        padding-right: 10px;
+        margin-bottom: 10px;
+    }
+}
+
+/*Para pantallas con un alto maximo a 500 px*/
+@media screen and (max-height:500px){
+    
+    .container-operacion{
+        padding-top: 20px;
+    }
+    
+
+    .tiempo{
+        font-size: 1.2em;
+    }
+
+    .timer{
+        letter-spacing: 1px;
+    }
+    
+    /*Operaciones matematicas*/
+    .operacion-arriba, .operacion-abajo{
+        height: 70px;
+        font-size: 3.2em;
+    }
+
+    #txtResultado{
+        height: 70px;
+        font-size: 3.2em;
+    }
+}
+
+/*Para pantallas con un alto maximo a 500 px*/
+@media screen and (max-height:380px){
+    .container{
+        flex-wrap: nowrap;
+    }
+
+    .container-tiempo{
+        width: 100%;
+    }
+
+    .container-img{
+        display: none;
+    }
+
+    .container-operacion{
+        width: 100%;
+        height: 100%;
+    }
+
+    .form-control{
+        width: 100%;
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: column;
+        padding-top: 10px;
+    }
+
+    .tiempo{
+        font-size: 1em;
+    }
+
+    .timer{
+        margin: 0px;
+        letter-spacing: 0px;
+    }
+
+    #txtResultado{
+        height: 70px;
+        font-size: 3.2em;
+    }
+
+    .btn-enviar{
+        height:60px;
+        width: 120px;
+    }
+
+    .ejercicios-restantes{
+        font-size: 1em;
+        font-weight:bold;
+        padding: 4px 0 0 0;
+    }
+    
+}
+

@@ -1,0 +1,187 @@
+* {
+    box-sizing: border-box;
+}
+/*Diseño para el modal*/
+.container-modal{
+    display: none;
+    background-color: rgba(0, 0, 0, 0.767);
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    z-index: 2;
+}
+
+.modal {
+    overflow: auto;
+    text-align: center;
+    background-color: white;
+    position:fixed;
+    height: 94%;
+    top: 3%;
+    bottom: 3%;
+    width: 94%;
+    left: 3%;
+    right: 3%;
+    box-shadow: 2px 2px 5px rgb(0, 0, 0), -2px -2px 5px rgb(0, 0, 0);
+}
+
+.modal-title{
+    margin-top: 5px;
+    padding: 0 5px;
+    font-family: "Paytone One";
+    letter-spacing: 3px;
+    font-size:2em;
+    color: rgb(17, 17, 17)
+}
+
+/*Inicio Card*/
+.modal-body{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.card-modal {
+    margin: 5px;
+    width:calc(20% - 10px);
+    border-radius: 20px;
+    background-color: #4051e1;
+}
+
+.card-number-modal{
+    color: white;
+    font-size: 1.6em;
+    border-radius: 20px 20px 0px 0px;
+    background-color: green;
+    display: block;
+}
+
+.card-body-modal{
+    margin: 15px;
+}
+
+.card-body-modal div{
+    color: white;
+    font-size: 1em;
+    font-family: Comfortaa;
+}
+
+.res-error{
+    color: #ff5772;
+    font-weight: bold;
+}
+
+.res-correct{
+    color: #dbd2a9;
+    font-weight: bold;
+}
+
+.card-footer-modal{
+    text-align: right;
+}
+
+#iconRes{
+    height: 50px;
+    margin-right: 20px;
+}
+/*Fin Card*/
+
+/*Inicio botones*/
+.btn-aceptar, .btn-rechazar {
+    width: 150px;
+    height: 50px;
+    color: white;
+    font-size: 1.2em;
+}
+
+.btn-aceptar{
+    background-color: rgb(64 81 225);
+    margin: 0 10px 20px 10px;
+}
+
+.btn-rechazar{
+    background-color: rgb(219, 85, 51);
+    margin: 0 10px 20px 10px;
+}
+
+
+.btn-aceptar:hover{
+    box-shadow: 5px 5px 5px rgb(130, 135, 180);
+}
+
+.btn-rechazar:hover{
+    box-shadow: -5px 5px 5px rgb(130, 135, 180);
+}
+/*Fin botones*/
+
+/*Desde aqui se maneja los tamaños de la pantalla*/
+
+/*Media queries para el modal*/
+@media screen and (max-width: 1220px){
+    .modal-body{
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .card-modal {
+        margin: 10px;
+        width:calc(25% - 20px);
+    }
+}
+
+@media screen and (max-width: 1000px){
+    .modal-body{
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .card-modal {
+        margin: 10px;
+        width:calc(33.333% - 20px);
+    }
+}
+
+@media screen and (max-width: 800px){
+    .modal-body{
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .card-modal {
+        margin: 10px;
+        width:calc(50% - 20px);
+    }
+}
+
+@media screen and (max-width: 600px){
+    .modal {
+        width: auto;
+        left: 5%;
+        right: 5%;
+    }
+}
+
+@media screen and (max-width: 560px){
+    .modal-body{
+        flex-direction: column;
+        flex-wrap: nowrap;
+    }
+
+    .card-modal {
+        margin: 10px 15%;
+        width:calc(100% - 30%);
+    }
+}
+
+@media screen and (max-width: 400px){
+    .modal-body{
+        flex-direction: column;
+        flex-wrap: nowrap;
+    }
+
+    .card-modal {
+        margin: 10px;
+        width:calc(100% - 20px);
+    }
+}
